@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+
+/* eslint-disable react/no-unescaped-entities */
 // app/page.tsx
 // Landing de "IA para Médicos" con video corto en el hero y CTA a Hotmart
 // Coloca tu video en /public/hero.mp4 y (opcional) una imagen /public/og-cover.jpg y /public/poster.jpg

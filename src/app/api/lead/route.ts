@@ -1,3 +1,9 @@
+type BrevoError = {
+  code?: number | string;
+  message?: string;
+  [key: string]: unknown;
+};
+
 // src/app/api/lead/route.ts
 import type { NextRequest } from "next/server";
 
@@ -30,14 +36,21 @@ export async function POST(req: NextRequest) {
       }),
     });
 
-    // Ignora “duplicate_parameter” (ya existe) y continúa
-    if (!contactRes.ok) {
-      const data = await contactRes.json().catch(() => ({}));
-      const code = (data as any)?.code?.toString() || "";
-      if (contactRes.status !== 400 || !code.includes("duplicate_parameter")) {
-        console.error("Brevo contacts error", data);
-      }
-    }
+// Ignora 'duplicate_parameter' (ya existe) y continúa
+if (!contactRes.ok) {
+  const data = (await contactRes.json().catch(() => ({}))) as BrevoError;
+  const code = data?.code ? String(data.code) : "";
+
+  // Si NO es el caso conocido de 'duplicate_parameter', corta con error
+  if (contactRes.status !== 400 || !code.includes("duplicate_parameter")) {
+    console.error("Brevo contacts error", data);
+    return NextResponse.json(
+      { ok: false, error: "Brevo contacts error", data },
+      { status: contactRes.status || 500 }
+    );
+  }
+}
+
 
     // 2) Enviar email con link de descarga
     const emailRes = await fetch("https://api.brevo.com/v3/smtp/email", {
