@@ -87,11 +87,11 @@ export async function POST(req: NextRequest) {
         sender: { email: senderEmail, name: senderName },
         replyTo: { email: senderEmail, name: senderName },
         to: [{ email, name }],
-        subject: "Tu guía: IA para Médicos",
+        subject: "Tu guía: IA para Emprendedores",
         htmlContent: `
           <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;">
             <h2>¡Gracias por tu interés!</h2>
-            <p>Aquí tienes tu acceso a <strong>IA para Médicos – Guía práctica + Checklist</strong>.</p>
+            <p>Aquí tienes tu acceso gratuito a <strong>IA para Emprendedores</strong>.</p>
             <p>👉 <a href="${downloadUrl}" target="_blank" rel="noopener">Descargar ahora</a></p>
             <hr style="border:none;border-top:1px solid #eee;margin:16px 0" />
             <p style="color:#666;font-size:13px;">Si no solicitaste este recurso, ignora este mensaje.</p>
