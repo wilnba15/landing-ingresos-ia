@@ -2,7 +2,7 @@
 // Usa TailwindCSS. Reemplaza CHECKOUT_URL con tu Hotlink de Hotmart.
 import Image from "next/image";
 
-const CHECKOUT_URL = "https://pay.hotmart.com/L102026137W?checkoutMode=10"; // TODO: pega tu enlace real
+const CHECKOUT_URL = "https://pay.hotmart.com/F102192125G?off=e37wbvi3&checkoutMode=10"; // TODO: pega tu enlace real
 
 export default function LandingIAMedicos() {
   return (
