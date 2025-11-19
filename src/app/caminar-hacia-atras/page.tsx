@@ -339,7 +339,7 @@ export default function CaminarHaciaAtrasPage() {
 
         <div className="mt-6 flex flex-col items-center gap-3">
           <Link
-            href="https://tu-enlace-de-compra-o-hotmart.com" // 👉 cambia por tu checkout real
+            href="https://pay.hotmart.com/E103032317X" // 👉 cambia por tu checkout real
             className="rounded-xl bg-cyan-400 px-8 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-400/40 transition hover:bg-cyan-300"
           >
             Quiero el libro + mini-ebook ahora
