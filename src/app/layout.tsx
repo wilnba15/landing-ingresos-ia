@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Academia IA by WV",
-  description: "Libros, mini-cursos y consultoría para generar ingresos con IA.",
+  description: "Expertos consultores en Inteligencia Artificial.",
 };
 
 export default function RootLayout({
