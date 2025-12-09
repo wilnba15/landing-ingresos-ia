@@ -60,7 +60,7 @@ export default function RetroWalkingEnglishPage() {
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-cyan-500/20 blur-2xl" />
             <div className="overflow-hidden rounded-3xl border border-slate-700 bg-slate-900/70 shadow-2xl">
               <Image
-                src="/images/portada-retro-walking.png" // 👉 final English cover here
+                src="/images/portada-retro-walking." // 👉 final English cover here
                 alt="Retro Walking book cover"
                 width={700}
                 height={1000}
